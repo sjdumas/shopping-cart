@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "Inter", sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+}
+
+html,
+body {
+	@apply bg-neutral-100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-medium text-black mb-2;
+}
+
+h1 {
+	@apply text-6xl;
+}
+
+h2 {
+	@apply text-2xl;
+}
+
+h3 {
+	@apply text-xl;
+}
+
+p {
+	@apply font-normal text-neutral-600 my-1;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:hover {
+	opacity: .8;
+}
+
+.products {
+	@apply py-6;
+}
+
+.product {
+	@apply border-0 rounded-md bg-white/65;
+}
+
+.artist-info {
+	@apply px-5 py-2;
+}
+
+.artist-img {
+	@apply rounded-t-md;
+}
