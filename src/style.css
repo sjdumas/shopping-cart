@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400&display=swap");
+@import "tailwindcss";
+
+@theme {
+	--font-sans: "Inter", sans-serif;
+}
+
+html,
+body {
+	@apply font-sans font-normal bg-neutral-50 text-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-medium mb-2;
+}
+
+h1 {
+	@apply text-6xl;
+}
+
+h2 {
+	@apply text-3xl;
+}
+
+h3 {
+	@apply text-xl;
+}
+
+h4 {
+	@apply text-lg;
+}
+
+h5 {
+	@apply text-base;
+}
+
+p {
+	@apply my-1;
+}
+
+select {
+	@apply border border-neutral-400 rounded-sm p-2;
+}
+
+button {
+	cursor: pointer;
+}
+
+.home-landing a:hover {
+	@apply scale-105;
+}
+
+.grid-4 {
+	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8;
+}
+
+.navbar {
+	@apply sticky top-0 z-50 bg-white px-6 py-4 flex justify-between items-center shadow-md;
+}
+
+.nav-logo {
+	@apply text-base font-medium text-neutral-700 hover:text-blue-600 transition-colors duration-200;
+}
+
+.nav-links {
+	@apply flex gap-6 text-base font-medium text-neutral-700 items-center;
+}
+
+.nav-link {
+	@apply hover:text-blue-600 transition-colors duration-200;
+}
+
+.cart-badge {
+	@apply absolute -top-2 -right-3 bg-red-500 text-white text-xs font-semibold rounded-full px-2;
+}
+
+header h1 {
+	@apply font-bold;
+}
+
+header h2 {
+	@apply font-light;
+}
+
+.page-header {
+	@apply bg-blue-500 text-white text-center py-20 md:py-24 lg:py-24 px-4 sm:px-6 lg:px-8;
+}
+
+.page-title {
+	@apply text-4xl md:text-5xl lg:text-6xl mb-2 md:mb-4 font-bold;
+}
+
+.page-subtitle {
+	@apply text-xl md:text-2xl lg:text-3xl mb-6 font-light;
+}
+
+.header-cta {
+	@apply mt-4;
+}
+
+.header-cta p {
+	@apply text-lg text-neutral-50 mb-4 max-w-xl mx-auto pb-3;
+}
+
+.header-cta a {
+	@apply inline-block bg-neutral-800 hover:bg-black text-white font-semibold text-lg px-6 py-3 rounded-md transition duration-300;
+}
+
+.products {
+	@apply py-12 space-y-12;
+}
+
+.products > .product:not(:last-child) {
+	@apply border-b border-neutral-300;
+}
+
+.product {
+	@apply border-0 rounded-md bg-white/65;
+}
+
+.product:hover {
+	@apply shadow-lg transition duration-300 ease-in-out;
+}
+
+/* Product Card Base Style */
+.product-card {
+	@apply bg-white shadow-md rounded-md p-4 flex flex-col items-center text-center transition;
+}
+
+.product-card img {
+	@apply w-32 h-32 object-contain mb-3;
+}
+
+.product-card h3 {
+	@apply text-lg font-semibold text-neutral-800 mb-1;
+}
+
+.product-card p {
+	@apply text-sm text-neutral-600 mb-2;
+}
+
+.product-card input {
+	@apply w-12 text-center border border-gray-300 rounded;
+}
+
+.product-card .qty-controls {
+	@apply flex items-center gap-2 mb-2;
+}
+
+.product-card .add-button {
+	@apply mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-4 rounded;
+}
+
+.cart-container {
+	@apply container mx-auto px-4 sm:px-6 py-8;
+}
+
+.cart-item {
+	@apply flex items-center gap-6 border-b pb-4;
+}
+
+.cart-item img {
+	@apply w-20 h-20 object-contain;
+}
+
+.cart-item h3 {
+	@apply text-lg font-semibold text-neutral-800;
+}
+
+.cart-item p {
+	@apply text-sm text-neutral-600;
+}
+
+.cart-total {
+	@apply text-right;
+}
+
+.cart-checkout-btn {
+	@apply mt-4 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded font-semibold;
+}
+
+.site-footer {
+	@apply grid grid-cols-2 bg-neutral-900 text-neutral-50 py-4 px-6;
+}
+
+.site-footer p {
+	@apply text-neutral-50;
+}
+
+.site-footer .socials {
+	@apply flex gap-4 justify-end;
+}
+
+.site-footer .socials a {
+	@apply transition-colors duration-200;
+}
+
+.site-footer .socials a:hover {
+	@apply text-neutral-400;
+}
+
+footer p {
+	@apply text-neutral-50;
+}
+
+footer a:hover {
+	@apply hover:text-neutral-400 transition-colors duration-200;
+}
