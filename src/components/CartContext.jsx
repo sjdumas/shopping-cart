@@ -18,6 +18,20 @@ export function CartProvider({ children }) {
 			return [...prevItems, { ...product, quantity }];
 		});
 	};
+
+	const updateQuantity = (productId, newQuantity) => {
+		setCartItems((prevItems) =>
+			prevItems.map(item =>
+				item.id === productId
+					? { ...item, quantity: newQuantity }
+					: item
+			)
+		);
+	};
+	
+	const removeFromCart = (productId) => {
+		setCartItems((prevItems) => prevItems.filter(item => item.id !== productId));
+	};	
 	
 	const clearCart = () => setCartItems([]);
 
@@ -28,11 +42,13 @@ export function CartProvider({ children }) {
 		addToCart,
 		cartCount,
 		clearCart,
+		updateQuantity,
+		removeFromCart,
 	};
 
 	return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
-}
+};
 
 export function useCart() {
 	return useContext(CartContext);
-}
+};

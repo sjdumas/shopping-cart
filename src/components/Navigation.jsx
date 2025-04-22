@@ -9,7 +9,7 @@ export default function Navigation() {
 	return (
 		<nav className="navbar">
 			<div className="nav-logo">
-				<Link to="/">Shop Mania</Link>
+				<Link to="/">Shopper's Delight</Link>
 			</div>
 			<ul className="nav-links">
 				<li>
@@ -32,4 +32,4 @@ export default function Navigation() {
 			</ul>
 		</nav>
 	);
-}
+};

@@ -8,7 +8,7 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 export default function Footer() {
 	return (
 		<footer className="site-footer">
-			<p>&copy; ShopMania</p>
+			<p>&copy; Shopper's Delight</p>
 			<div className="socials">
 				<a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
 					<FontAwesomeIcon icon={faXTwitter} size="lg" />
@@ -28,4 +28,4 @@ export default function Footer() {
 			</div>
 		</footer>
 	);
-}
+};

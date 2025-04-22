@@ -7,7 +7,7 @@
 
 html,
 body {
-	@apply font-sans font-normal bg-neutral-50 text-base;
+	@apply font-sans font-normal bg-neutral-100 text-base;
 }
 
 h1,
@@ -55,12 +55,16 @@ button {
 	@apply scale-105;
 }
 
+.section-title {
+	@apply mb-12;
+}
+
 .grid-4 {
 	@apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8;
 }
 
 .navbar {
-	@apply sticky top-0 z-50 bg-white px-6 py-4 flex justify-between items-center shadow-md;
+	@apply sticky top-0 z-50 bg-white px-6 py-4 flex justify-between items-center;
 }
 
 .nav-logo {
@@ -79,20 +83,20 @@ button {
 	@apply absolute -top-2 -right-3 bg-red-500 text-white text-xs font-semibold rounded-full px-2;
 }
 
-header h1 {
-	@apply font-bold;
+.hero {
+	@apply bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 px-6 text-center w-full;
 }
 
-header h2 {
-	@apply font-light;
+.hero-button {
+	@apply inline-block bg-white text-blue-600 font-semibold text-lg px-6 py-3 mt-5 rounded-md shadow hover:bg-neutral-100 transition;
 }
 
 .page-header {
-	@apply bg-blue-500 text-white text-center py-20 md:py-24 lg:py-24 px-4 sm:px-6 lg:px-8;
+	@apply bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center py-20 md:py-24 lg:py-24 px-4 sm:px-6 lg:px-8;
 }
 
 .page-title {
-	@apply text-4xl md:text-5xl lg:text-6xl mb-2 md:mb-4 font-bold;
+	@apply text-4xl md:text-5xl lg:text-6xl mb-2 md:mb-4 font-medium;
 }
 
 .page-subtitle {
@@ -129,7 +133,7 @@ header h2 {
 
 /* Product Card Base Style */
 .product-card {
-	@apply bg-white shadow-md rounded-md p-4 flex flex-col items-center text-center transition;
+	@apply bg-white rounded-sm py-6 px-4 flex flex-col items-center text-center transition;
 }
 
 .product-card img {
@@ -137,7 +141,7 @@ header h2 {
 }
 
 .product-card h3 {
-	@apply text-lg font-semibold text-neutral-800 mb-1;
+	@apply text-xl font-semibold text-neutral-800 mb-1;
 }
 
 .product-card p {
@@ -145,15 +149,19 @@ header h2 {
 }
 
 .product-card input {
-	@apply w-12 text-center border border-gray-300 rounded;
+	@apply w-12 py-1 text-center border border-neutral-300 rounded-sm;
 }
 
 .product-card .qty-controls {
-	@apply flex items-center gap-2 mb-2;
+	@apply flex items-center gap-2 my-2;
+}
+
+.product-card .qty-controls button {
+	@apply px-2 py-1 bg-neutral-100/80 rounded-sm;
 }
 
 .product-card .add-button {
-	@apply mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-4 rounded;
+	@apply mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-sm w-full;
 }
 
 .cart-container {
@@ -202,6 +210,10 @@ header h2 {
 
 .site-footer .socials a:hover {
 	@apply text-neutral-400;
+}
+
+.cta {
+	@apply py-24 sm:py-12 md:py-20 lg:py-24 px-4 bg-white/55 text-neutral-900 text-center w-full;
 }
 
 footer p {
