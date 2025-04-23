@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useCart } from "../components/CartContext";
 import ProductCard from "../components/ProductCard";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function Products() {
 	const [products, setProducts] = useState([]);
@@ -39,7 +40,7 @@ export default function Products() {
 		addToCart(product, quantities[product.id]);
 	};
 
-	if (loading) return <p>Loading products...</p>;
+	if (loading) return <LoadingSpinner />;
 
 	return (
 		<div className="container mx-auto px-4 sm:px-6 py-8">

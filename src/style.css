@@ -51,6 +51,14 @@ button {
 	cursor: pointer;
 }
 
+.loading-spinner {
+	@apply flex justify-center items-center py-16;
+}
+
+.spinner {
+	@apply w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin;
+}
+
 .home-landing a:hover {
 	@apply scale-105;
 }
@@ -137,10 +145,11 @@ button {
 }
 
 .product-card img {
-	@apply w-32 h-32 object-contain mb-3;
+	@apply w-32 h-32 object-contain mb-3 mx-auto;
 }
 
-.product-card h3 {
+.product-card h3,
+.product-details h3 {
 	@apply text-xl font-semibold text-neutral-800 mb-1;
 }
 
@@ -148,7 +157,8 @@ button {
 	@apply text-sm text-neutral-600 mb-2;
 }
 
-.product-card input {
+.product-card input,
+.product-details input {
 	@apply w-12 py-1 text-center border border-neutral-300 rounded-sm;
 }
 
@@ -162,6 +172,32 @@ button {
 
 .product-card .add-button {
 	@apply mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-sm w-full;
+}
+
+.product-details .add-button {
+	@apply mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-sm;
+}
+
+.product-details-bg,
+.policy-pages-bg,
+.cart-bg {
+	@apply bg-white;
+}
+
+.product-details h2 {
+	@apply text-2xl;
+}
+
+.product-details {
+	@apply max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8;
+}
+
+.product-details .qty-controls {
+	@apply flex items-center gap-2 my-4;
+}
+
+.view-products {
+	@apply mt-8;
 }
 
 .cart-container {
@@ -189,27 +225,51 @@ button {
 }
 
 .cart-checkout-btn {
-	@apply mt-4 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded font-semibold;
+	@apply mt-4 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded font-semibold;
 }
 
-.site-footer {
-	@apply grid grid-cols-2 bg-neutral-900 text-neutral-50 py-4 px-6;
+.policy-page {
+	@apply max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-left;
 }
 
-.site-footer p {
-	@apply text-neutral-50;
+.policy-page h1 {
+	@apply text-4xl font-semibold mb-6;
 }
 
-.site-footer .socials {
-	@apply flex gap-4 justify-end;
+.policy-page p {
+	@apply text-base text-neutral-700 mb-4;
 }
 
-.site-footer .socials a {
-	@apply transition-colors duration-200;
+.policy-page ul {
+	@apply list-disc ml-5 text-neutral-700 mb-4;
 }
 
-.site-footer .socials a:hover {
-	@apply text-neutral-400;
+.policy-page li {
+	@apply mb-2;
+}
+
+.footer-wrapper {
+	@apply bg-neutral-900 text-neutral-50 py-6 px-4;
+}
+
+.footer-grid {
+	@apply max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 items-center gap-4 text-center sm:text-left;
+}
+
+.footer-brand {
+	@apply text-sm;
+}
+
+.footer-socials {
+	@apply flex justify-center gap-4;
+}
+
+.footer-links {
+	@apply flex justify-center sm:justify-end gap-4 text-sm;
+}
+
+.footer-links a {
+	@apply hover:text-neutral-400;
 }
 
 .cta {

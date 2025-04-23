@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,8 +11,10 @@ const truncateText = (text, maxLength) => {
 export default function ProductCard({ product, quantity, setQuantity, onAdd }) {
 	return (
 		<div className="product-card">
-			<img src={product.image} alt={product.title} />
-			<h5>{truncateText(product.title, 25)}</h5>
+			<Link to={`/products/${product.id}`} className="text-center w-full">
+				<img src={product.image} alt={product.title} />
+				<h5>{truncateText(product.title, 25)}</h5>
+			</Link>
 			<h3>${product.price}</h3>
 
 			{setQuantity && (

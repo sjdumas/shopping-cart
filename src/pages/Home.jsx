@@ -4,6 +4,7 @@ import { faTruck, faLock, faHeadset } from "@fortawesome/free-solid-svg-icons";
 import CallToAction from "../components/CallToAction";
 import ProductCard from "../components/ProductCard";
 import Hero from "../components/Hero";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function Home() {
 	const [electronics, setElectronics] = useState([]);
@@ -23,6 +24,24 @@ export default function Home() {
 		};
 		fetchElectronicsProducts();
 	}, []);
+
+		const [womensClothing, setWomensClothing] = useState([]);
+		const [loadingWomens, setLoadingWomens] = useState(true);
+
+		useEffect(() => {
+			const fetchWomensClothing = async () => {
+				try {
+					const res = await fetch("https://fakestoreapi.com/products/category/women's clothing");
+					const data = await res.json();
+					setWomensClothing(data.slice(0, 4));
+					setLoadingWomens(false);
+				} catch (error) {
+					console.error("Failed to fetch women's clothing", error);
+					setLoadingWomens(false);
+				}
+			};
+			fetchWomensClothing();
+		}, []);
 
 		const [mensClothing, setMensClothing] = useState([]);
 		const [loadingMens, setLoadingMens] = useState(true);
@@ -75,7 +94,7 @@ export default function Home() {
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 					<h2 className="section-title">Featured Electronics</h2>
 					{loading ? (
-						<p className="py-10">Loading featured electronics...</p>
+						<LoadingSpinner />
 					) : (
 						<div className="grid-4 mb-10">
 							{electronics.map((product) => (
@@ -95,6 +114,22 @@ export default function Home() {
 					) : (
 						<div className="grid-4 mb-10">
 							{mensClothing.map((product) => (
+								<ProductCard key={product.id} product={product} />
+							))}
+						</div>
+					)}
+				</div>
+			</section>
+
+			{/* Women's Clothing */}
+			<section className="py-8 text-center">
+				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+					<h2 className="section-title">Featured Womenswear</h2>
+					{loadingWomens ? (
+						<p className="py-10">Loading fashion picks...</p>
+					) : (
+						<div className="grid-4 mb-10">
+							{womensClothing.map((product) => (
 								<ProductCard key={product.id} product={product} />
 							))}
 						</div>
