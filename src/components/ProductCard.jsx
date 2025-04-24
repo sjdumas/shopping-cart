@@ -7,7 +7,6 @@ const truncateText = (text, maxLength) => {
 	return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 };
 
-
 export default function ProductCard({ product, quantity, setQuantity, onAdd }) {
 	return (
 		<div className="product-card">
@@ -16,7 +15,6 @@ export default function ProductCard({ product, quantity, setQuantity, onAdd }) {
 				<h5>{truncateText(product.title, 25)}</h5>
 			</Link>
 			<h3>${product.price}</h3>
-
 			{setQuantity && (
 				<div className="qty-controls">
 					<button

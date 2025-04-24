@@ -105,7 +105,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Men's Clothing */}
+			{/* Featured Men's Clothing */}
 			<section className="py-8 text-center">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 					<h2 className="section-title">Featured Menswear</h2>
@@ -121,7 +121,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Women's Clothing */}
+			{/* Featured Women's Clothing */}
 			<section className="py-8 text-center">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 					<h2 className="section-title">Featured Womenswear</h2>
@@ -137,8 +137,8 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Full-width CTA */}
+			{/* CTA */}
 			<CallToAction />
 		</div>
 	);
-}
+};

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function Header() {
@@ -38,14 +37,10 @@ export default function Header() {
 				subtitle: "Your number 1 shopping source",
 		  };
 
-	useEffect(() => {
-		document.title = location.pathname === "/" ? title : `${title} | Shopper's Delight`;
-	}, [title, location.pathname]);
-
 	return (
 		<header className="page-header">
 			<h1 className="page-title">{title}</h1>
 			<h2 className="page-subtitle">{subtitle}</h2>
 		</header>
 	);
-}
+};

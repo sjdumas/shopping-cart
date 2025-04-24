@@ -4,7 +4,7 @@ export default function CallToAction() {
 	return (
 		<section className="cta">
 			<h2 className="text-3xl font-semibold mb-4">
-				Don't Miss Out on the Latest Drops
+				Don't Be the One to Miss Out
 			</h2>
 			<p className="text-md mb-6 text-neutral-700 pb-4">
 				Shop our top-rated products and best deals before they're gone!
@@ -17,4 +17,4 @@ export default function CallToAction() {
 			</Link>
 		</section>
 	);
-}
+};
